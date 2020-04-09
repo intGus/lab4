@@ -19,7 +19,7 @@ for file in files:
     file_name, ext = file.split('.')
     item_dict['image_name'] = file_name + '.jpeg'
 
-    r = requests.post('http://35.193.30.105/fruits/', json = item_dict)
+    r = requests.post('http://104.155.139.38/fruits/', json = item_dict)
     if r.status_code == 201: print('item {} successfully uploaded'.format(file))
     else: print('Error while uploading {}, returned error {}'.format(file, r.status_code))
 
