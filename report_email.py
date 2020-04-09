@@ -2,7 +2,7 @@
 
 import reports
 import os
-import datetime
+from datetime import date
 
 def process_data():
   path = "../supplier-data/descriptions/"
@@ -18,6 +18,8 @@ def process_data():
 
 def main():
   string = process_data()
+  title = "Processed Update on " + date.today().strftime("%B %d, %Y")
+  #print(title) 
   reports.generate_report('/tmp/processed.pdf',title, string)
 
 if __name__ == "__main__":
